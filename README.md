@@ -6,7 +6,7 @@
 
 Thus far, we've only worked on a client-side-rendered (CSR) application, often referred to as a single page application (SPA). In a SPA, all html is generated in the browser by executing your JS code. Interacting with dynamic components and navigating between pages is handled by your JS code.
 
-An alternative approach to a SPA application is a Server-Side Rendered (SSR) application. An SSR application renders all html on a backend server and there is very little, if any javascript executed in the browser. Navigating between pages, directs the browser to a new URL, which loads new HTML from the backend server.
+An alternative approach to a SPA application is a Server-Side Rendered (SSR) application. An SSR application renders all html on a backend server and there is very little, if any javascript executed in the browser. Navigating between pages, directs the browser to a new URL, which loads new HTML from the backend server. Loading content from a backend can be quicker with SSR if the application is hosted on the same server, but external API calls likely take the same amount of time.
 
 In this exercise, you will work in your project groups to learn about the practical differences between a SPA app and a SSR app in React. You will do this by running your own app with both CSR and SSR components, implementing some basic functionality and observing the results.
 
@@ -103,7 +103,9 @@ Once you have this working, you should see the image load instantly - no delay b
 
 ## Exercise 5 - Compare CSR and SSR
 
-Now that you've run both CSR and SSR versions of this app, you can compare them and see the differences. Observe how the pages load on the CSR and SSR pages.
+Now that you've run both CSR and SSR versions of this app, you can compare them and see the differences. Observe how the pages load on the CSR and SSR pages, how it loads when you click the "Refresh" button, along with the experience of waiting for the page to load.
+
+In our project, the SSR and CSR apps will are working with an external API, so they both take about the same amount of time to load. The big difference is when/how that load time happens. Which of the two versions do you experience to load faster?
 
 ## Questions
 
