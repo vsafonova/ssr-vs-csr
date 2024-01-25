@@ -14,9 +14,15 @@ export default function Static() {
     const fetchData = async () => {
       setLoading(true);
       const response = await fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=1&thumbs=true`
-        // { cache: "force-cache" }
+        `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=1&thumbs=true`,
+        { cache: "no-cache" }
       );
+
+      if (!response.ok) {
+        // This will activate the closest `error.js` Error Boundary
+        throw new Error("Failed to fetch data");
+      }
+
       const [json] = await response.json();
 
       setData(json);
