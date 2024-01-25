@@ -84,7 +84,7 @@ Once you have this code written correctly, the page should load immediately with
 
 ## Exercise 3 - Caching requests
 
-By default, server fetching caches the result of fetch requests. In some cases, this is great. For example, our page loaded a bit slowly on the first visit, but now it loads instantly. The tradeoff is that the result of the request is the same every time, which we don't want here. We want a random picture every time we visit the page. In order to turn off caching for our request, pass a second argument to the `fetch` function like so `fetch('apiUrl', { cache: "no-cache" })`.
+In Next.js, server fetching caches the result of fetch requests by default. In some cases, this is great. For example, our page loaded a bit slowly on the first visit, but now it loads instantly. The tradeoff is that the result of the request is the same every time, which we don't want here. We want a random picture every time we visit the page. In order to turn off caching for our request, pass a second argument to the `fetch` function like so `fetch('<API_URL>', { cache: "no-cache" })`.
 
 Now try refreshing the page.
 
