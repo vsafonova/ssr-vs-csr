@@ -23,10 +23,11 @@ Read the following background material to get oriented:
 ## Setup
 
 1. Get NASA API key [here](https://api.nasa.gov/)
-2. Clone the projet repo `git clone https://github.com/thetylerwolf/ssr-vs-csr.git`
-3. Go to the repo directory `cd ssr-vs-csr`
-4. Install dependencies `npm install`
-5. Replace the text `DEMO_KEY` with your NASA API key in `src/constants.js`
+2. Fork the repo via Github UI
+3. Clone your projet repo `git clone <YOUR GIT REPO>`
+4. Go to the repo directory `cd ssr-vs-csr`
+5. Install dependencies `npm install`
+6. Replace the text `DEMO_KEY` with your NASA API key in `src/constants.js`
 
 ## Exercise 1 - Understand the code
 
