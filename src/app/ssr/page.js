@@ -6,8 +6,20 @@ import { imageUrlToBase64 } from "@/helpers";
 
 async function getData() {
   // Exercise 1 - Fetch the data here...
-  //
-  //
+  const response = await fetch(
+    `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&count=1&thumbs=true`,
+    { cache: "no-cache" }
+  );
+
+  if (!response.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error("Failed to fetch data");
+  }
+
+  const [json] = await response.json();
+
+  return json;
+
   // Exercise 2 - Optimize the image loading here...
   //
   //
