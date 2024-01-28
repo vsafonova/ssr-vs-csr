@@ -18,13 +18,11 @@ async function getData() {
 
   const [json] = await response.json();
 
-  return json;
-
   // Exercise 2 - Optimize the image loading here...
-  //
-  //
+  let imageData = await imageUrlToBase64(json.url);
+  json.image = imageData;
   // Uncomment this when you're ready
-  // return json
+  return json;
 }
 
 export default async function SSR() {
